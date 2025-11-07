@@ -2,7 +2,7 @@ class PsqlTransporter < Formula
   desc "CLI to export/import Postgres databases safely"
   homepage "https://github.com/jayps/psql-transporter"
   license "MIT"
-  version "1.0.5"
+  version "1.0.7"
 
   on_macos do
     if Hardware::CPU.arm?
@@ -19,8 +19,8 @@ class PsqlTransporter < Formula
       url "https://github.com/jayps/psql-transporter/releases/download/v1.0.5/psql-transporter_v1.0.5_linux_arm64.tar.gz"
       sha256 "ff88d658e50e7a30e5b9f5f79ab41b91d0b2fb71761b418301f11f7dbd1aac32"
     else
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.5/psql-transporter_v1.0.5_linux_amd64.tar.gz"
-      sha256 "a5f40f39fa360eb41946f5aaf4c957334d6e9062c8d0a2a2dda136a1a96e0180"
+      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.7/psql-transporter_v1.0.7_linux_amd64.tar.gz"
+      sha256 "be6335c1d464b52e91f36375c4b78a10da31a3f5794b5bc52716836d9a29a482"
     end
   end
 
