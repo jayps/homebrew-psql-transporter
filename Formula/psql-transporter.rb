@@ -2,25 +2,25 @@ class PsqlTransporter < Formula
   desc "CLI to export/import Postgres databases safely"
   homepage "https://github.com/jayps/psql-transporter"
   license "MIT"
-  version "1.0.8"
+  version "1.0.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.5/psql-transporter_v1.0.5_darwin_arm64.tar.gz"
-      sha256 "dca5fee574af1f9d30969802c2709286e42648c921502f474c01115c162769ca"
+      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.9/psql-transporter_v1.0.9_darwin_arm64.tar.gz"
+      sha256 "eae576faa82313599b803cee92244fbd2c37c05a3bd67f96e136a055228206b5"
     else
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.5/psql-transporter_v1.0.5_darwin_amd64.tar.gz"
-      sha256 "13d736b53054e3d768ad0de729046abcbd8e84c1d79702dccdf08352ff865305"
+      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.9/psql-transporter_v1.0.9_darwin_amd64.tar.gz"
+      sha256 "0ea24ddd430c1c79810eafa948ce272b0d3c8b1d110f764f810b010f5bfe6ccb"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.5/psql-transporter_v1.0.5_linux_arm64.tar.gz"
-      sha256 "ff88d658e50e7a30e5b9f5f79ab41b91d0b2fb71761b418301f11f7dbd1aac32"
+      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.9/psql-transporter_v1.0.9_linux_arm64.tar.gz"
+      sha256 "ff713012048cdacae74ead30ecc3d695d4a5ea4ec6583a18f1e7267553cc2756"
     else
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.8/psql-transporter_v1.0.8_linux_amd64.tar.gz"
-      sha256 "41f3cccfef17125a08d5165c5ccc9cc2cc99a63f3f7563fc0945f2254349d311"
+      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.9/psql-transporter_v1.0.9_linux_amd64.tar.gz"
+      sha256 "af8dde1c7c819cb646b9196be27816d672beaa6d2e454fa4578e5040ff34af9c"
     end
   end
 
