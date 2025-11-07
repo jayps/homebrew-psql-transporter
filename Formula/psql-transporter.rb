@@ -1,31 +1,33 @@
 class PsqlTransporter < Formula
   desc "CLI to export/import Postgres databases safely"
   homepage "https://github.com/jayps/psql-transporter"
-  version "v1.0.0"
   license "MIT"
+  version "1.0.5" 
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.0/psql-transporter_v1.0.0_darwin_arm64.tar.gz"
-      sha256 "86b3e6670f3e971f369640904949c36611c06dc8962da041b0067ef9ea54323b"
+      url "https://github.com/jayps/psql-transporter/releases/download/v#{version}/psql-transporter_v#{version}_darwin_arm64.tar.gz"
+      sha256 "dca5fee574af1f9d30969802c2709286e42648c921502f474c01115c162769ca"
     else
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.0/psql-transporter_v1.0.0_darwin_amd64.tar.gz"
-      sha256 "eb0831c3fb909c8c856a1636870671b6b106c1b28614bf20107dba4588f7e13d"
+      url "https://github.com/jayps/psql-transporter/releases/download/v#{version}/psql-transporter_v#{version}_darwin_amd64.tar.gz"
+      sha256 "13d736b53054e3d768ad0de729046abcbd8e84c1d79702dccdf08352ff865305"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.0/psql-transporter_v1.0.0_linux_arm64.tar.gz"
-      sha256 "e2bf84a9aadad1d732e3399d488729118221b2f2334b1f6b9383ea2bb64c1fe4"
+      url "https://github.com/jayps/psql-transporter/releases/download/v#{version}/psql-transporter_v#{version}_linux_arm64.tar.gz"
+      sha256 "ff88d658e50e7a30e5b9f5f79ab41b91d0b2fb71761b418301f11f7dbd1aac32"
     else
-      url "https://github.com/jayps/psql-transporter/releases/download/v1.0.0/psql-transporter_v1.0.0_linux_amd64.tar.gz"
-      sha256 "2aef656c094f77823384182c9ba1a4c1cd4db86f1089b7f9dafc86621b27a7a7"
+      url "https://github.com/jayps/psql-transporter/releases/download/v#{version}/psql-transporter_v#{version}_linux_amd64.tar.gz"
+      sha256 "a5f40f39fa360eb41946f5aaf4c957334d6e9062c8d0a2a2dda136a1a96e0180"
     end
   end
 
   def install
-    bin.install "psql-transporter"
+    bin_path = Dir["**/psql-transporter"].first
+    odie "psql-transporter binary not found in archive" if bin_path.nil?
+    bin.install bin_path => "psql-transporter"
   end
 
   test do
